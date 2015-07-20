@@ -278,7 +278,7 @@ namespace JSONAPI.Core
 
         private static string FormatPropertyName(string propertyName)
         {
-            string result = propertyName.Substring(0, 1).ToLower() + propertyName.Substring(1);
+           string result = Humanizer.InflectorExtensions.Dasherize(Humanizer.InflectorExtensions.Underscore(propertyName));
             return result;
         }
 
